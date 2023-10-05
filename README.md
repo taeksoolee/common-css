@@ -17,7 +17,7 @@
 
 ## ✓ Class Rules
 > See files in config directory 
-- width, height : {w|h}-{range}
+- width, height : {w|h}-{range|full}, w-vw, h-wh
 - padding, margin : {p|m}{a|t|l|r|b}-{range}
 - text : {t}-{color}-{default|1|2|3|4|5|6|7|8|9}
 - background-color : {bg}-{color}-{default|1|2|3|4|5|6|7|8|9}

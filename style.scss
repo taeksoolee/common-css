@@ -27,6 +27,20 @@
   }
 }
 
+.w-full {
+  width: 100%;
+}
+.w-vw {
+  width: 100vw;
+}
+
+.h-full {
+  height: 100%;
+}
+.w-vh {
+  height: 100vh;
+}
+
 // spacing
 @each $i in $range {
   @each $e in $atlrb {
