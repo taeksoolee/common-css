@@ -1,0 +1,21 @@
+@use 'sass:list';
+@import './functions';
+
+$tb: ();
+$tb: list.append($tb, ('t' 'top'));
+$tb: list.append($tb, ('b' 'bottom'));
+
+$lr: ();
+$lr: list.append($lr, ('l' 'left'));
+$lr: list.append($lr, ('r' 'right'));
+
+$a: ();
+$a: list.append($a, ('a' ''));
+// $a: list.append($a, ('', ''));
+
+$xy: ();
+$xy: list.append($xy, ('x' ('left', 'right')));
+$xy: list.append($xy, ('y' ('top', 'bottom')));
+
+$tlrb: list.join($tb, $lr);
+$atlrb: list.join($a, $tlrb);

@@ -1,0 +1,23 @@
+@use 'sass:list';
+
+@function prependDash($str) {
+  @if ($str == '') {
+    @return $str;
+  }
+  @return '-' + $str;
+}
+
+@function make-pallete($color) {
+  @return (
+    default: $color,
+    '1': lighten($color, 40),
+    '2': lighten($color, 30),
+    '3': lighten($color, 20),
+    '4': lighten($color, 10),
+    '5': $color,
+    '6': darken($color, 10),
+    '7': darken($color, 20),
+    '8': darken($color, 30),
+    '9': darken($color, 40),
+  );
+}

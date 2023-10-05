@@ -1,0 +1,30 @@
+@use 'sass:list';
+@import '../export/functions';
+
+$pallete-colors: (
+  ('red', red),
+  ('orange', orange),
+  ('yellow', yellow),
+  ('green', green),
+  ('blue', blue),
+  ('darkblue', darkblue),
+  ('purple', purple),
+);
+
+$pallete-color-maps: ();
+@each $e in $pallete-colors {
+  $map: (
+    nth($e, 1): make-pallete(nth($e, 2))
+  );
+
+  $pallete-color-maps: list.append($pallete-color-maps, $map);
+}
+
+// ranibow
+$pallete-red: make-pallete(red);
+$pallete-orange: make-pallete(orange);
+$pallete-yellow: make-pallete(yellow);
+$pallete-green: make-pallete(green);
+$pallete-blue: make-pallete(blue);
+$pallete-darkblue: make-pallete(darkblue);
+$pallete-purple: make-pallete(purple);

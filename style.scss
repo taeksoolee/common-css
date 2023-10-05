@@ -1,0 +1,99 @@
+@import './config/variables';
+@import './config/pallete';
+
+@import './export/constants';
+@import './export/functions';
+
+:root {
+  @each $colors-map in $pallete-color-maps {
+    @each $color-name, $colors in $colors-map {
+      @each $color-key, $color in $colors {
+
+        --#{$color-name}-#{$color-key}: #{$color};
+      }
+    }
+  }
+
+  --spacing-term: #{$spacing-term};
+}
+
+// width, height
+@each $i in $range {
+  .#{map-get($attr-names, 'width')}#{prependDash($i)} {
+    width: calc(var(--spacing-term) * $i);
+  }
+  .#{map-get($attr-names, 'height')}#{prependDash($i)} {
+    height: calc(var(--spacing-term) * $i);
+  }
+}
+
+// spacing
+@each $i in $range {
+  @each $e in $atlrb {
+    
+    .#{map-get($attr-names, 'padding')}#{nth($e, 1)}#{prependDash($i)} {
+      padding#{prependDash(nth($e, 2))}: calc(var(--spacing-term) * $i);
+    }
+    .#{map-get($attr-names, 'margin')}#{nth($e, 1)}#{prependDash($i)} {
+      margin#{prependDash(nth($e, 2))}: calc(var(--spacing-term) * $i);
+    }
+  }
+
+  @each $e in $xy { 
+    .#{map-get($attr-names, 'padding')}#{nth($e, 1)}#{prependDash($i)} {
+      @each $v in nth($e, 2) {
+        padding#{prependDash($v)}: calc(var(--spacing-term) * $i);
+      }
+    }
+    .#{map-get($attr-names, 'margin')}#{nth($e, 1)}#{prependDash($i)} {
+      @each $v in nth($e, 2) {
+        margin#{prependDash($v)}: calc(var(--spacing-term) * $i);
+      }
+    }
+  }
+}
+
+// float
+@each $e in $tlrb {
+  .#{map-get($attr-names, 'float')}#{prependDash(nth($e, 2))} {
+    float: #{nth($e, 2)};
+  }
+  .#{map-get($attr-names, 'float')}#{prependDash(nth($e, 2))} {
+    float: #{nth($e, 2)};
+  }
+}
+
+// container
+.align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.algin-left {
+  display: flex;
+  justify-content: end;
+  align-items: flex-center;
+}
+
+.algin-right {
+  display: flex;
+  justify-content: end;
+  align-items: flex-start;
+}
+
+@each $colors-map in $pallete-color-maps {
+  @each $color-name, $colors in $colors-map {
+    @each $color-key, $color in $colors {
+      .#{map-get($attr-names, 'text')}#{prependDash($color-name)}#{prependDash($color-key)} {
+        color: var(--#{$color-name}-#{$color-key});
+      }
+
+      .#{map-get($attr-names, 'background')}#{prependDash($color-name)}#{prependDash($color-key)} {
+        color: var(--#{$color-name}-#{$color-key});
+      }
+    }
+  }
+}
+
+

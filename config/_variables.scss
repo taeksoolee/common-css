@@ -1,0 +1,22 @@
+$attr-names: (
+  width: 'w',
+  height: 'h',
+  padding: 'p',
+  margin: 'm',
+  float: 'float',
+  //
+  text: 't',
+  background: 'bg',
+);
+
+
+// $spacing
+$spacing-term: 2px;
+
+// $range
+$range: ();
+$range-start: 0;
+$range-end: 100;
+@for $i from $range-start to $range-end+1 {
+  $range: append($range, $i);
+};
