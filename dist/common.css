@@ -880,6 +880,22 @@
   height: calc(var(--spacing-term) * 100);
 }
 
+.w-full {
+  width: 100%;
+}
+
+.w-vw {
+  width: 100vw;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-vh {
+  height: 100vh;
+}
+
 .pa-0 {
   padding: calc(var(--spacing-term) * 0);
 }
