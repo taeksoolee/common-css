@@ -8,7 +8,7 @@
 <link href="https://taeksoolee.github.io/common-css/dist/common.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 ```
 - min
-```
+``` html
 <link href="https://taeksoolee.github.io/common-css/dist/common.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 ```
 <br />
